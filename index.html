@@ -16,6 +16,7 @@
     <!--FIM GLOOGLE FONTS-->
     <link rel="shortcut icon" href="img/logoRRSantos.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <!--BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--BOOTSTRAP ICONS-->
@@ -28,7 +29,7 @@
             <div class="logo">
 
                 <a href="#">
-                    <img src="img/logoRRSantos.png" width="100px">
+                    <img src="img/logoRRSantos.png" width="95px">
                 </a>
 
             </div><!--logo-->
@@ -41,11 +42,36 @@
                     <li><a href="#">Projetos</a></li>
                 </ul>
             </nav>
+
             <div class="RR-contato">
                 <a href="#">
                     <button>Contato</button>
                 </a>
+            </div><!---RR-Contato-->
+
+            <div onclick="abrirMenu()" class="rr-abrir-menu" id="rr-menu">
+                <i class="bi bi-list"></i>
             </div>
+
+            <div onclick="feixaMenu()" class="menu-mobile" id="menu-mobile">
+                <div class="rr-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div><!---menu-mobile-->
+
+            <div onclick="feixaMenu()" class="overley--menu" id="overley--menu"></div>
+            
         </div><!--interface-->
     </header>
 

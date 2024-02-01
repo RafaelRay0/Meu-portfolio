@@ -56,19 +56,22 @@ header {
 }
 
 header>.interface {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 header a {
+
     color: #000000aa;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 
-header a:hover {
+header nav.menu-desktop a:hover {
+
     color: #02569bfa;
     transform: scale(1.05);
 }
@@ -77,12 +80,85 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
+
     display: inline-block;
     padding: 0 40px;
 }
 
+/* ESTILO DO MENU MOBILE */
 
+.rr-abrir-menu i{
+
+    color: #000;
+    font-size: 40px;
+}
+
+.menu-mobile {
+
+    background-color: #6a6a6a;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu {
+
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overley--menu {
+
+    display: block;
+}
+
+.menu-mobile .rr-fechar {
+
+    padding: 20px 5%;
+}
+
+.menu-mobile .rr-fechar i{
+
+    color: #000000c1;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+
+    color: #fff;
+    font-size:20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+
+    background-color: #02569bd6;
+    color: #000;
+}
+
+.overley--menu {
+
+    background-color: #000000b6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
 
 /* ESTILO DO TOPO DO SITE*/
 
@@ -366,6 +442,10 @@ footer .line-footer p a {
     color: #000000f9;
 }
 
+.rr-abrir-menu{
+    display: none;
+}
+
 @media screen and (max-width: 1020px) {
 
     /* CLASSES GERAIS */
@@ -380,8 +460,7 @@ footer .line-footer p a {
     }
 
     /* CABEÇALHO */
-    .menu-desktop,
-    .RR-contato {
+    .menu-desktop,.RR-contato {
         display: none;
     }
 
@@ -464,6 +543,9 @@ footer .line-footer p a {
         text-align: center;
     }
     
+    .rr-abrir-menu{
+        display: block;
+    }
     
 
 }
