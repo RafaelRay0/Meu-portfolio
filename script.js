@@ -12,3 +12,10 @@ const menu = document.getElementById('menu-mobile')
 }
 
 
+function teste() {
+const test = document.querySelector('.título')
+const value = document.querySelector('.valueLi')
+
+    value = test
+}
+
